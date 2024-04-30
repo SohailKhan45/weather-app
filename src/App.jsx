@@ -9,7 +9,6 @@ import mistImage from "../public/mist.jpg";
 import dustImage from "../public/dust.jpg";
 import smokeImage from "../public/smoky.jpg";
 import { CiSearch } from "react-icons/ci";
-const dotenv = require("dotenv").config();
 
 import "./App.css"
 
@@ -25,7 +24,7 @@ const App = () => {
   const inputRef = useRef();
   useEffect(() => {
     const fetchWeatherData = async (city) => {
-      const api_key = process.env.API_KEY;
+      const api_key = "2af09e99d5ff1f1fad46cbe535236ef1";
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`
 
       try {
